@@ -5,21 +5,34 @@ h1, h2, h3 { font-family: 'Satoshi', 'Inter', sans-serif; }
 .portfolio-card { transition: all 0.3s ease; }
 .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 
-/* Horizontal scroll styling */
-.overflow-x-auto::-webkit-scrollbar {
-    height: 6px;
+/* Continuous scrolling animation */
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
 }
 
-.overflow-x-auto::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
+.scroll-content {
+    display: inline-flex;
+    gap: 1.5rem;
+    animation: scroll 30s linear infinite;
 }
 
-.overflow-x-auto::-webkit-scrollbar-thumb {
-    background: #FF6B5A;
-    border-radius: 3px;
+.scroll-content > div {
+    flex-shrink: 0;
+    text-align: center;
 }
 
-.overflow-x-auto::-webkit-scrollbar-thumb:hover {
-    background: #e55a49;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Pause animation on hover */
+.scroll-container:hover .scroll-content {
+    animation-play-state: paused;
 }
