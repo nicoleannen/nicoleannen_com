@@ -4,3 +4,22 @@ h1, h2, h3 { font-family: 'Satoshi', 'Inter', sans-serif; }
 .section-fade.visible { opacity: 1; transform: translateY(0); }
 .portfolio-card { transition: all 0.3s ease; }
 .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+
+/* Horizontal scroll styling */
+.overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background: #FF6B5A;
+    border-radius: 3px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: #e55a49;
+}
