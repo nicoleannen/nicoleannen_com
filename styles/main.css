@@ -1,5 +1,5 @@
 /* Main Styles */
-h1, h2, h3 { font-family: 'Roboto Mono', monospace; }
+h1, h2, h3 { font-family: 'Satoshi', 'Inter', sans-serif; }
 .section-fade { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .section-fade.visible { opacity: 1; transform: translateY(0); }
 .portfolio-card { transition: all 0.3s ease; }
